@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn &amp; Build - Free Coding Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-code"></i> Learn &amp; Build</h1>
+            <p>Learn coding for free and build amazing projects</p>
+        </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav>
+        <div class="container">
+            <ul class="tabs">
+                <li class="tab active" data-tab="dashboard">Dashboard</li>
+                <li class="tab" data-tab="courses">Courses</li>
+                <li class="tab" data-tab="editor">Code Editor</li>
+                <li class="tab" data-tab="register">Register</li>
+                <li class="tab" data-tab="upload">Upload Project</li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- Dashboard Tab -->
+            <section id="dashboard" class="tab-content active">
+                <h2>Your Dashboard</h2>
+                <div class="welcome-message">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Welcome, learner! Start your coding journey today.</span>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div stat-card>
+                        <h3>Active Courses</h3>
+                        <p>0/3 completed</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>Projects Uploaded</h3>
+                        <p>0 projects</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>Learning Streak</h3>
+                        <p>0 days</p>
+                    </div>
+                </div>
+
+                <h3>Quick Links</h3>
+                <div class="quick-links">
+                    <a href="https://github.com" target="_blank" class="link-btn"><i class="fab fa-github"></i>
+                        GitHub</a>
+                    <a href="https://developer.mozilla.org" target="_blank" class="link-btn"><i class="fab fa-mdn"></i>
+                        MDN Docs</a>
+                    <a href="https://www.w3schools.com" target="_blank" class="link-btn"><i
+                            class="fas fa-graduation-cap"></i> W3Schools</a>
+                    <a href="https://freecodecamp.org" target="_blank" class="link-btn"><i
+                            class="fas fa-free-code-camp"></i> freeCodeCamp</a>
+                </div>
+
+                <h3>Your Projects</h3>
+                <div id="projects-list" class="projects-list">
+                    <p class="no-projects">No projects uploaded yet. Go to the Upload tab to get started!</p>
+                </div>
+            </section>
+
+            <!-- Courses Tab -->
+            <section id="courses" class="tab-content">
+                <h2>Choose Your Free Course</h2>
+                <p>Select a course to start learning and building projects for free</p>
+
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <i class="fas fa-laptop-code course-icon"></i>
+                        <h3>Web Development</h3>
+                        <p>Learn HTML, CSS, JavaScript and build responsive websites</p>
+                        <button type="button" class="btn-primary" data-course="web-dev">Start Free Course</button>
+                    </div>
+
+                    <div class="course-card">
+                        <i class="fas fa-chart-line course-icon"></i>
+                        <h3>Data Science</h3>
+                        <p>Analyze data, create visualizations and build ML models</p>
+                        <button type="button" class="btn-primary" data-course="data-science">Start Free Course</button>
+                    </div>
+
+                    <div class="course-card">
+                        <i class="fas fa-mobile-alt course-icon"></i>
+                        <h3>Mobile App Development</h3>
+                        <p>Build iOS and Android apps with React Native and Flutter</p>
+                        <button type="button" class="btn-primary" data-course="mobile-dev">Start Free Course</button>
+                    </div>
+
+                    <div class="course-card">
+                        <i class="fas fa-gamepad course-icon"></i>
+                        <h3>Game Development</h3>
+                        <p>Create 2D and 3D games using popular game engines</p>
+                        <button type="button" class="btn-primary" data-course="game-dev">Start Free Course</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Code Editor Tab -->
+            <section id="editor" class="tab-content">
+                <h2>Code Editor</h2>
+                <p>Write and test your HTML, CSS, and JavaScript code</p>
+
+                <div class="editor-container">
+                    <div class="editor-panel">
+                        <h3>HTML</h3>
+                        <textarea id="html-code"
+                            placeholder="<!DOCTYPE html>&#10;<html>&#10;<head>&#10;  <title>My Page</title>&#10;</head>&#10;<body>&#10;  <h1>Hello World</h1>&#10;</body>&#10;</html>">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;My Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello World&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+                    </div>
+
+                    <div class="editor-panel">
+                        <h3>CSS</h3>
+                        <textarea id="css-code"
+                            placeholder="/* Add your CSS styles here */&#10;body {&#10;  font-family: Arial, sans-serif;&#10;  margin: 0;&#10;  padding: 20px;&#10;}">/* Add your CSS styles here */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}</textarea>
+                    </div>
+
+                    <div class="editor-panel">
+                        <h3>JavaScript</h3>
+                        <textarea id="js-code"
+                            placeholder="// Add your JavaScript code here&#10;console.log('Hello, World!');">// Add your JavaScript code here
+console.log('Hello, World!');</textarea>
+                    </div>
+                </div>
+
+                <div class="editor-controls">
+                    <button type="button" id="run-code" class="btn-success"><i class="fas fa-play"></i> Run
+                        Code</button>
+                    <button type="button" id="reset-code" class="btn-warning"><i class="fas fa-undo"></i> Reset
+                        Code</button>
+                </div>
+
+                <div class="output-container">
+                    <h3>Live Preview</h3>
+                    <div id="output-preview" class="preview-frame">
+                        <!-- Preview content will be injected here -->
+                    </div>
+
+                    <div id="console-output" class="console-frame">
+                        <h4>Console Output</h4>
+                        <div id="console-log">Ready to run code...</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Registration Tab -->
+            <section id="register" class="tab-content">
+                <h2>Create Your Account</h2>
+                <p>Join our community of learners and start building today</p>
+
+                <form id="registration-form">
+                    <div class="form-group">
+                        <label for="reg-name">Full Name</label>
+                        <input type="text" id="reg-name" placeholder="Enter your full name" autocomplete="name"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reg-email">Email Address</label>
+                        <input type="email" id="reg-email" placeholder="Enter your email" autocomplete="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reg-password">Password</label>
+                        <input type="password" id="reg-password" placeholder="Create password"
+                            autocomplete="new-password" required minlength="6">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reg-confirm-password">Confirm Password</label>
+                        <input type="password" id="reg-confirm-password" placeholder="Confirm your password"
+                            autocomplete="new-password" required minlength="6">
+                    </div>
+
+                    <button type="submit" class="btn-primary btn-block"><i class="fas fa-user-plus"></i> Create
+                        Account</button>
+                </form>
+
+                <div id="registration-message" class="form-message"></div>
+            </section>
+
+            <!-- Upload Project Tab -->
+            <section id="upload" class="tab-content">
+                <h2>Upload Your Project</h2>
+                <p>Share your coding projects with the community</p>
+
+                <form id="upload-form">
+                    <div class="form-group">
+                        <label for="project-title">Project Title</label>
+                        <input type="text" id="project-title" placeholder="Enter project title" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="project-description">Project Description</label>
+                        <textarea id="project-description" placeholder="Describe your project" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="project-tags">Tags (comma separated)</label>
+                        <input type="text" id="project-tags" placeholder="e.g., html, css, web development">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="project-file">Upload Project Files</label>
+                        <div class="file-upload-area">
+                            <input type="file" id="project-file" multiple>
+                            <div class="upload-preview">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>Drag &amp; drop files here or click to browse</p>
+                                <p class="small-text">Supported: HTML, CSS, JS, ZIP</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-primary btn-block"><i class="fas fa-upload"></i> Upload
+                        Project</button>
+                </form>
+
+                <div id="upload-message" class="form-message"></div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Learn &amp; Build</h4>
+                    <p>Free coding education platform for everyone</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Learn &amp; Build. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
